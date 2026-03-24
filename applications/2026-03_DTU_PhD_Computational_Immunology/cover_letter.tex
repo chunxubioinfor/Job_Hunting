@@ -1,0 +1,61 @@
+% !TEX program = xelatex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{DTU Health Tech}
+
+\companyaddress{
+Section for Bioinformatics \\
+Technical University of Denmark \\
+2800 Kgs. Lyngby
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Leon,}
+
+\lettercontent{
+I am applying for the PhD scholarship in Computational Immunology and Machine Learning at DTU Health Tech. I recently completed my MSc in Bioinformatics and Systems Biology at DTU, where I have spent the past two and a half years working on methods development and software for high-dimensional omics data. When I read the position description, the core tasks — designing ML frameworks for high-dimensional sequence data, rigorous model benchmarking, evaluating transferability across datasets — felt like a natural continuation of what I have already been building towards.
+}
+
+\lettercontent{
+My master's thesis, carried out at Novo Nordisk, focused on developing and benchmarking computational methods to assess batch-to-batch variability in single-cell RNA-seq data. This involved designing quantitative metrics from scratch, systematically comparing existing computational tools, and exploring ML approaches to connect transcriptomic signals with functional outcomes — all packaged into \textbf{scBatch}, a reproducible Python framework. Alongside this, I spent two years as a research assistant at DTU HealthTech contributing to \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} v2, a tool for isoform-level analysis of long-read and single-cell sequencing data, which resulted in a published preprint. I am used to building things that are not just functional, but transferable and well-documented — which I see as central to this PhD's focus on generalisability across datasets and biological contexts.
+}
+
+\lettercontent{
+I want to be transparent: I do not have a background in immunology or TCR biology specifically. But I have come to see that as a feature rather than a limitation for this position. The role is explicitly about methodological innovation — developing and rigorously evaluating ML models for high-dimensional sequence data — and that is precisely the kind of work I have been doing, just applied to a different biological context. I am genuinely excited by the clinical angle of this project, particularly the connection to type 1 diabetes and the collaboration with Rigshospitalet. It is the kind of translational motivation that I found energising during my time at Novo Nordisk, and I would like to continue working in that direction.
+}
+
+\lettercontent{
+Thank you very much for considering my application. I would be happy to discuss the project further.
+}
+
+\closing{Sincerely,\\
+Chunxu Han \\
+\vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}

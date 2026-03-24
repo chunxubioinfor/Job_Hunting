@@ -1,0 +1,89 @@
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \namesection{Chunxu}{Han}{ \urlstyle{same} \href{mailto:s220311@dtu.dk}{s220311@dtu.dk} | +45 52 73 06 85  | \urlstyle{same}\href{https://www.linkedin.com/in/chunxu-han/}{Linkedin}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Synapse}
+
+\companyaddress{
+ Howitzvej 30 \\
+2000 Frederiksberg
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Synapse Team,}
+
+% The first paragraph of your job application letter should include information on why you are writing. Mention the job you are applying for and where you found the position. If you have a contact at the company, mention the person's name and your connection here.
+
+\lettercontent{
+I am applying to the Clinical Winter School because it closely connects to questions that come up in my current work, as well as my future career path. As a bioinformatics master’s student, I work with patient-derived data often at a stage where clinical and regulatory decisions have already shaped what the data can show. I would like to better understand how those decisions are made, and how they influence study design and interpretation.
+} 
+
+\lettercontent{
+Apart from the research, I have worked in a consulting setting where I was involved in communicating clinical outcomes to different audiences, including doctors and patients. That experience made me aware that clinical results are not only about analysis, but also about how evidence is framed and understood in practice.
+} 
+
+   
+% The next section of your cover letter should describe what you have to offer the company. Make strong connections between your abilities and the requirements listed in the job posting. Mention specifically how your skills and experience match the job. Expand on the information in your resume.
+% Try to support each statement you make with a piece of evidence. Use several shorter paragraphs or bullets rather than one large block of text, which can be difficult to read and absorb quickly.
+%For example 
+
+% Using the knowledge and skills I have acquired in my <DEGREE PROGRAM> combined with my technical abilities I believe I can provide significant value to <COMPANY> while providing me invaluable experience to <PREPARE FOR OR FURTHER CAREER>.
+% <RELEVANT LIFE STORY/ WORK/ PROJECT >
+% In own projects, my coursework, work as a <PREVIOUS JOB TITLE> I have applied knowledge of <SUBJECT MATTER>.
+% <LIST OF SMART SOUNDING SKILLS AND TOOLS>.
+% Combining these tools with my interests in <FIELD> issues, I hope to help the <DEPARTMENT> answer questions about the <SUBJECT> behind <FIELD> projects.
+
+\lettercontent{I am currently working on batch-to-batch comparability of single-cell data for cell therapy research at Novo Nordisk. In this area, there are few established standards, and much of the work sits upstream of future clinical studies. This has made me interested in how early computational and quality assessments can meaningfully support clinical development.
+}
+
+% \lettercontent{I also have practical experience in bioinformatics, especially single-cell analysis. I helped updating IsoformSwitchAnalyzeR v2 (preprint) and applied it to single-cell GBM data. We found that peripheral tumour cells increase expression of non-coding GJC1 isoforms, effectively reducing the protein-coding variant, a change that may contribute to tumour invasion. My thesis focuses on developing methods to assess batch-to-batch variability in single-cell RNA-seq data. I have also been exposed to spatial transcriptomics through close collaboration with colleagues at ex-Cell Therapy, and I am very motivated to further develop skills in this area.
+% }
+
+\lettercontent{I would actively engage in discussions by contributing a computational perspective and learning from the clinical viewpoints of others. As I am graduating next March and considering roles in clinical data science, I see the winter school as a natural next step in understanding how clinical studies are designed and evaluated.
+}
+
+\lettercontent{Thank you very much for considering my application.}
+% Conclude your application letter by thanking the employer for considering you for the position. 
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}  
+\documentclass[]{article}

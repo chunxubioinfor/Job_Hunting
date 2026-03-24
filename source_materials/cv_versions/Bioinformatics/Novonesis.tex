@@ -1,0 +1,435 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Chunxu Han's CV},
+    pdfauthor={Chunxu Han},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{multicol}
+\usepackage{datetime2}
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Chunxu Han - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \raggedright
+        \fontsize{28 pt}{28 pt} 
+        \textbf{Chunxu Han}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Peder Skrams Gade 16A, København K, Denmark}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:s220311@dtu.dk}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}s220311@dtu.dk}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+45 52 73 06 85}{{\footnotesize\faPhone*}\hspace*{0.13cm}+45 52 73 06 85}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/chunxu-han/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}chunxu-han}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/chunxubioinfor}{{\footnotesize\faGithub}\hspace*{0.13cm}chunxubioinfor}}%
+    \end{header}
+
+    \vspace{0.4 cm - 0.3 cm}
+
+
+    \section{Motivation}
+
+
+
+        
+        \begin{onecolentry}
+             I am applying for this position because the work aligns closely with my experience in statistical analysis in R and collaborative research. Over the past years, I have worked with R daily to develop and update statistical frameworks within an R package, as well as to support other scientists with data preprocessing, analysis, and interpretation. I am comfortable contributing to ongoing projects, and I see this paternity cover as a good opportunity to learn how biostatistics is applied in animal research trials. At this stage of my career, I am looking for a role where I can add value while continuing to grow through hands-on work with experienced researchers.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+        
+%     \section{Relevant Experience}
+
+          
+% \begin{onecolentry}
+
+
+% \textbf{Database \& Data Management} \\
+% I enrolled in both DTU's course and IBM's \textit{Databases and SQL for Data Science} course, which gave me a solid foundation in SQL and ETL. At DTU HealthTech, I developed and maintained data resources for isoform-level proteomics analysis. I collected, curated, and performed QC on more than 40k proteomics samples from GPMdb, and built a pipeline to re-quantify all the data on the HPC server. I also extracted and organised metadata and results, adhering to FAIR principles
+%  for internal use, and created automated update scripts to keep the resources synchronised with the GPMdb. To further sharpen my database skills, I initiated a mini-project to transform these resources into a true relational database.
+
+
+
+
+%         \vspace{0.3 cm}
+
+% \textbf{Quality and Process Mindset} \\
+% I used to work as a QC intern in a GMP-regulated lab at SinoVac, which gave me a strong understanding of the importance of compliance. This semester, I enrolled in a course called "\textit{GMP and Quality in Pharmaceutical, Biotech, and Food Industry}", where I gained a comprehensive view of all GMP frameworks, including QMS. I participated in a simulated company audit based on ICH Q7 and Eudralex Vol. 4. I enjoyed the process of analysis and evaluation of compliance. We finally found many non-conformities in the documentation provided, and I learned a lot about QMS through audit.
+
+%         \vspace{0.3 cm}
+% \textbf{Collaborative Mindset} \\
+% I’ve worked closely with PhD students, postdocs, and researchers at both DTU and Novo Nordisk. I often help biologists run analyses, troubleshoot pipelines, or discuss data interpretation, and I genuinely enjoy this kind of collaborative problem-solving. 
+% \end{onecolentry}
+
+\section{Relevant Experience}
+
+\begin{onecolentry}
+
+\textbf{Statistical analysis and method development in R} \\
+For the past two years, I have worked on the development and maintenance of the \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} R package. (\textit{A recommendation letter attached}). We introduced the new statistical frameworks to improve the robustness of isoform switch identification and updated to version 2, which is now available as a \href{https://www.biorxiv.org/content/10.64898/2025.12.08.693027v1}{preprint}. In my current master’s thesis, I develop quantitative methods to assess batch-to-batch variability at the per-cell level in single-cell RNA-seq data, with a strong focus on statistical rigour, interpretability, and reproducibility.
+
+\vspace{0.3 cm}
+
+\textbf{Cross-functional collaboration and scientific communication} \\
+Worked closely with biologists, PhD students, postdocs, and industry researchers at DTU and Novo Nordisk. Much of my work involves clarifying analytical needs, translating them into concrete computational solutions, and discussing outputs with non-technical users. I am comfortable acting as a link between scientists and data-driven methods, and I value this collaborative way of working.
+
+\end{onecolentry}
+    \section{Education}
+
+
+
+        
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Sept 2023 - present
+}
+    \textbf{MSc in Bioinformatics and Systems Biology}, Technical University of Denmark
+    \begin{highlights}
+        \item I enrolled in both \textbf{Machine Learning} and \textbf{Deep Learning} courses, enabling me to develop an \textbf{AI-driven mindset} when formulating projects and developing new bioinformatics pipelines or tools. 
+    \end{highlights}
+\end{twocolentry}
+
+
+        \vspace{0.3 cm}
+
+\begin{twocolentry}{
+    Beijing, China
+    
+    Sept 2017 - June 2021
+}
+    \textbf{BSc in Biotechnology}, Beijing Normal University
+    \begin{highlights}
+        \item \textbf{Coursework:} Built a solid foundation in \textbf{Biotech} with courses covering ecology, molecular biology, cell biology, and bioinformatics, alongside laboratory training.
+    \end{highlights}
+\end{twocolentry}
+
+
+    
+    \section{Work Experience}
+
+        \begin{twocolentry}{
+    Målev, Denmark
+
+    Sep 2025 – present (expected till Feb 2026)
+}
+    \textbf{Master Student}, Novo Nordisk
+
+    \vspace{0.1cm}
+    
+     My master’s thesis focuses on developing computational frameworks to evaluate batch-to-batch variability in single-cell RNA-seq data:
+
+    \begin{highlights}
+        \item \textbf{Literature Review and Benchmark:} Systematically identify and evaluate existing computational tools for assessing batch comparability in both cell-type composition and transcriptional profiles
+
+        \vspace{0.1cm}
+
+        \item \textbf{Methodology Development:} Design, develop and test quantitative metrics and simplified scoring strategies on in-house data to support batch evaluation in GMP-adjacent research settings.
+
+        \vspace{0.1cm}
+
+        \item \textbf{AI/ML Approaches:} Explore machine learning methods to correlate transcriptomic variability with functional outcomes, contributing to predictive quality assessment.
+
+        % \vspace{0.1cm}
+
+        % \item \textbf{Meetings and Collaboration:} Participate in team meetings to stay updated on current trends in the Pharma industry. Collaborate with cross-functional R\&D and CMC teams to ensure the biological interpretability and industrial relevance.
+    \end{highlights}
+\end{twocolentry}
+
+
+        \vspace{0.3 cm}
+
+        
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Oct 2023 –  July 2025
+}
+    \textbf{Bioinformatics Research Assistant}, DTU HealthTech
+
+    \vspace{0.1cm}
+    
+     I worked in Isoform Analysis Group for two years, which has been a transformative experience. I have grown from a student who only focuses on theoretical studies into a bioinformatician to deal with real-world problems:
+
+    \begin{highlights}
+        \item \textbf{Development and Maintenance of Tools:} Contributed to developing and updating the \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} R package. This experience sharpened my coding skills and can-do mindset—especially when handling issues with tools I'd never used before. I pushed myself to attempt and now I'm comfortable with the steep learning curve. 
+
+        \vspace{0.1cm}
+
+        \item \textbf{Bioinformatics Pipelines:} Developed and optimized bioinformatics pipelines, supporting others in running analyses. I mastered multi-tasking, learned to leverage \textbf{HPC} for parallel processing, and \textbf{Git} to achieve version control.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Ad-hoc Work:} Managed various ad-hoc tasks, from literature reviews to data organization, learning how to \textbf{prioritize and organize} work effectively in a fast-paced research environment.
+    \end{highlights}
+\end{twocolentry}
+
+
+        \vspace{0.3 cm}
+
+        \begin{twocolentry}{
+    Shanghai, China
+
+    Feb 2023 – May 2023
+}
+    \textbf{Consulting Intern}, Illuminera, IQVIA
+
+    \vspace{0.1cm}
+    
+    My first experience in a business setting, where I gained insights into the pharmaceutical market and developed professional skills:
+    
+
+    \begin{highlights}
+        \item \textbf{Qualitative and Quantitative Research:} Conducted market trend and competitor analysis to formulate actionable strategies to clients. I also gained a deeper understanding of the pharmaceutical market in China and globally.
+
+        \vspace{0.1cm}
+        
+        \item \textbf{Client and KOLs Engagement:} I learnt how to build professional relationships with clients and KOLs and coordinate with stakeholders to align project progress.
+
+        \vspace{0.1cm}
+        
+        \item \textbf{Data-Driven Deliverables:} Utilized tools like PowerPoint and Power BI to deliver strategic reports, transforming complex data into actionable business insights.
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+        \begin{twocolentry}{
+    Beijing, China
+
+    Oct 2020 – Nov 2020
+}
+    \textbf{QC Intern}, SINOVAC BIOTECH LTD.
+
+    \vspace{0.1cm}
+    
+    Gained experience working in a \textbf{GMP-regulated Quality Control lab}:
+    
+
+    \begin{highlights}
+        \item Supported the implementation and maintenance of \textbf{GMP processes}, ensuring compliance with regulatory standards.
+
+        \vspace{0.1cm}
+        
+        \item \textbf{Techniques:} HP-LC, ELISA, SDS-PAGE, Lowry Protein Assay.
+
+    
+    
+    \end{highlights}
+\end{twocolentry}
+    
+%     \section{Publications}
+
+        
+%         \begin{onecolentry}
+%             \begin{itemize}
+%                 \item Jeppe Malthe Mikkelsen, \textbf{Chunxu Han}, Dimitrios S. Kanakoglou \& Kristoffer Vitting-Seerup. \textit{Isoform-level examination empowers analysis of both common and rare genetic variation}. \textbf{Genome Medicine}, Submitted.
+
+%                 \vspace{0.1 cm}
+    
+%                 \item \textbf{Chunxu Han} \& Kristoffer Vitting-Seerup. \textit{IsoformSwitchAnalyzeR v2: Enabling Identification and Analysis of Isoform Switches with Functional Consequences from Long-read and Single-cell Sequencing Data}. In preparation.
+% \end{itemize}
+%         \end{onecolentry}
+
+
+    
+    \section{Skills and Hobbies}
+
+        \begin{onecolentry}
+            \textbf{Programming \& Tools:} Python, R, Bash, SQL, Snakemake, Power BI, Docker
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Languages:} English (proficient), Chinese (native), Danish (Basic)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Soft Skills:} Communication, Teamwork, Client Engagement, Multitasking, Critical Thinking, Strong Work Ethic
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Hobbies:} 
+            I’ve been playing \textbf{badminton} since an early age—it’s a hobby that keeps me focused and energized. During holidays, I enjoy \textbf{traveling} around Europe to experience new food and cultures. I also love \textbf{hiking}, both for the chance to connect with nature and for the challenge of seeing hidden scenery that isn’t easily accessible. After moving to Denmark, I discovered a new passion: \textbf{sailing}. Last summer, we sailed to Ven and Hallands Väderö, and it was a completely new experience and  I feel free to ride the infinite waves.
+        \end{onecolentry}
+
+
+    
+\end{document}

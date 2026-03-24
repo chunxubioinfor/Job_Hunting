@@ -1,0 +1,89 @@
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \namesection{Chunxu}{Han}{ \urlstyle{same} \href{mailto:s220311@dtu.dk}{s220311@dtu.dk} | +45 52 73 06 85  | \urlstyle{same}\href{https://www.linkedin.com/in/chunxu-han/}{Linkedin}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Rigshospitalet}
+
+\companyaddress{
+Blegdamsvej 9 \\
+2100 København
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Marius-Konstantin Klever and Signe Modvig,}
+
+% The first paragraph of your job application letter should include information on why you are writing. Mention the job you are applying for and where you found the position. If you have a contact at the company, mention the person's name and your connection here.
+
+\lettercontent{
+I am applying for this position because it sits naturally at the intersection of my training and experience in bioinformatics and the type of research questions I have been drawn to over time.
+} 
+
+\lettercontent{
+My background is in bioinformatics, with my work covering genomic,  transcriptomic and proteomics data. Over the past two years at DTU HealthTech, I worked in the Isoform Analysis Group, contributing to the development and update of IsoformSwitchAnalyzeR, where my focus was on isoform-level changes driven by alternative splicing. Alongside this, I completed coursework in immunology and immunological bioinformatics, which gave me a practical understanding of how computational methods are used to study immune recognition. Through a group project on HIV-1 vaccination for T- and B-cell responses, I worked with epitope prediction and HLA-aware filtering using established tools, which helped me understand how genomic variation, expression, and immune context come together in immunologically relevant analyses.
+} 
+
+   
+% The next section of your cover letter should describe what you have to offer the company. Make strong connections between your abilities and the requirements listed in the job posting. Mention specifically how your skills and experience match the job. Expand on the information in your resume.
+% Try to support each statement you make with a piece of evidence. Use several shorter paragraphs or bullets rather than one large block of text, which can be difficult to read and absorb quickly.
+%For example 
+
+% Using the knowledge and skills I have acquired in my <DEGREE PROGRAM> combined with my technical abilities I believe I can provide significant value to <COMPANY> while providing me invaluable experience to <PREPARE FOR OR FURTHER CAREER>.
+% <RELEVANT LIFE STORY/ WORK/ PROJECT >
+% In own projects, my coursework, work as a <PREVIOUS JOB TITLE> I have applied knowledge of <SUBJECT MATTER>.
+% <LIST OF SMART SOUNDING SKILLS AND TOOLS>.
+% Combining these tools with my interests in <FIELD> issues, I hope to help the <DEPARTMENT> answer questions about the <SUBJECT> behind <FIELD> projects.
+
+\lettercontent{My interest in cancer research has developed gradually but consistently. During my time in China, cancer is often spoken about indirectly, as it is closely associated with fear and loss. I have seen many patients and families share their situations publicly to raise funds for treatment, and whenever possible, I have tried to help in small ways. Over time, this also shaped how I think about my own work. I realised that, beyond sympathy, the most meaningful contribution I can make is through my skills. This is one reason why, when choosing datasets and projects, I am repeatedly drawn to cancer-related questions. Most recently, we applied isoform-level analysis to single-cell glioblastoma data, where we observed changes in isoform usage that may be linked to the tumour invasion. Experiences like this have reinforced my motivation to work on cancer from a computational perspective.
+}
+
+% \lettercontent{I also have practical experience in bioinformatics, especially single-cell analysis. I helped updating IsoformSwitchAnalyzeR v2 (preprint) and applied it to single-cell GBM data. We found that peripheral tumour cells increase expression of non-coding GJC1 isoforms, effectively reducing the protein-coding variant, a change that may contribute to tumour invasion. My thesis focuses on developing methods to assess batch-to-batch variability in single-cell RNA-seq data. I have also been exposed to spatial transcriptomics through close collaboration with colleagues at ex-Cell Therapy, and I am very motivated to further develop skills in this area.
+% }
+
+\lettercontent{When I started my thesis at Novo, I thought it would help me decide clearly between an academic or industrial career path. Instead, what became clear to me is that I am most motivated by research that can ultimately contribute to patient health. I see this position as an opportunity to contribute meaningfully to translational cancer research, while continuing to grow as a researcher in a collaborative, multidisciplinary environment. I am also open to the possibility of pursuing a PhD if the project allows for it.
+}
+
+\lettercontent{Thank you very much for considering my application.}
+% Conclude your application letter by thanking the employer for considering you for the position. 
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}  
+\documentclass[]{article}

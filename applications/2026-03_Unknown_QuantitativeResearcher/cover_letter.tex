@@ -1,0 +1,50 @@
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Quantitative Investment Team}
+
+\companyaddress{
+Copenhagen, Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+I came across this role without a company name attached, which I found oddly fitting — the description alone was enough to make me want to apply. The combination of rigorous quantitative research, Python-driven implementation, and working in a small team where ideas are tested quickly and judged by evidence is exactly the kind of environment I am looking for.
+}
+
+\lettercontent{
+My background is in computational biology, not finance — I want to be upfront about that. But the research loop I have been doing for the past two years maps closely onto what you are describing. At Novo Nordisk, my thesis work centres on developing a novel quantitative metric (the Batch Mixing Index) to detect systematic variation in large single-cell RNA-seq datasets. I design the mathematical formulation, implement it in Python, and validate it with permutation-based significance testing. The domain is biology, but the methodology is the same: define a signal, build a pipeline to compute it rigorously, test whether it holds up. At DTU HealthTech, I built large-scale data pipelines processing more than 40,000 samples on HPC infrastructure, and contributed to IsoformSwitchAnalyzeR v2, an R package now published as a preprint on bioRxiv. I take implementation quality seriously — I build tools that others actually use and depend on.
+}
+
+\lettercontent{
+I hold DTU's Machine Learning and Deep Learning courses, and I have been applying statistical and ML methods in real research settings throughout my master's. Finance would be a new domain for me, but I have made several domain switches already — from biotech to consulting to bioinformatics — and in each case I built the necessary knowledge from scratch. I am a fast learner who is genuinely curious about quantitative methods, and I would approach learning financial markets with the same rigour I bring to everything else.
+}
+
+\lettercontent{
+Thank you for considering my application.
+}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}

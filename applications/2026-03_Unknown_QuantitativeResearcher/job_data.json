@@ -1,0 +1,15 @@
+{
+  "title": "Quantitative Researcher",
+  "company": "Unknown (leading quantitative investment team)",
+  "sector": "finance",
+  "location": "Copenhagen, Denmark",
+  "url": null,
+  "platform": "other",
+  "source_type": "job_ad",
+  "description": "A leading quantitative investment team is looking for a Quantitative Researcher to help design, develop, and improve equity statistical arbitrage strategies. This role sits at the intersection of research and development—requiring both strong quantitative reasoning and the ability to build reliable research tools and models in code.\n\nWhat You'll Do:\n- Develop Quantitative Strategies – Research and implement systematic equity statistical arbitrage models using large financial datasets.\n- Experiment and Iterate – Design research experiments, evaluate signals, and refine strategies through rigorous analysis and testing.\n- Build Research Tools – Write clean, efficient Python code to process data, develop models, and support the research pipeline.\n- Work with Financial Data – Analyze complex datasets to identify patterns, inefficiencies, and opportunities in equity markets.\n- Collaborate with Engineers and Researchers – Work closely with a small team of technically strong colleagues to translate ideas into production-ready strategies.\n\nWhat They're Looking For:\n- Strong quantitative background (e.g. Mathematics, Physics, Engineering, Computer Science, or similar)\n- Strong Python skills and experience working with data\n- Evidence of practical software development experience, ideally involving large datasets\n- Ability to move between theory and implementation\n- Interest in financial markets and systematic trading",
+  "deadline": null,
+  "match_score": 6,
+  "match_reasons": "Strong Python + large-scale data pipelines (40k+ samples, HPC)|Research-to-implementation loop mirrors quant strategy workflow|Statistical signal development (BMI metric, permutation testing)|Published research software (IsoformSwitchAnalyzeR v2, scBatch)|ML/DL coursework applied in real research settings",
+  "gaps": "No finance or trading domain experience|No time-series or market data modelling|Below PhD level (master's student)|No statistical arbitrage background",
+  "added_by": "f95221c9-da0b-490a-8331-5cb79c347d8f"
+}

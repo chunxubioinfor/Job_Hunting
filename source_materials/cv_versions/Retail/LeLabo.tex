@@ -1,0 +1,237 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{wasysym} % for smiley and other symbols
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Chunxu Han - CV},
+    pdfauthor={Chunxu Han},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{multicol}
+\usepackage{datetime2}
+
+% Ensure machine-readable PDF:
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+% Layout tweaks:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Chunxu Han}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{-1pt}{0.25 cm}{0.15 cm}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.08 cm,
+        parsep=0.08 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm}{0.2 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.35}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    % ---------- Header ----------
+    \begin{header}
+        \raggedright
+        \fontsize{26 pt}{26 pt} 
+        \textbf{Chunxu Han}
+
+        \vspace{0.28 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Peder Skrams Gade 16A, København K}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:s220311@dtu.dk}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}s220311@dtu.dk}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+45 52 73 06 85}{{\footnotesize\faPhone*}\hspace*{0.13cm}+45 52 73 06 85}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/chunxu-han/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}chunxu-han}}%
+    \end{header}
+
+    \vspace{0.25 cm}
+
+    % ---------- Profile ----------
+    \section{Motivation}
+    \begin{onecolentry}
+        I’m excited to apply because I’ve been a Le Labo lover for years, and \textbf{Santal 33} has been “my scent” since the first time I tried it, and I always recommend it to my friends whenever they ask about fragrance. Earlier this year, I visited the store near Nyhavn to ask if you were hiring, and the staff told me “maybe before Christmas”. So I’ve honestly been waiting for this moment. I admire Le Labo not just for the fragrances, but for the whole philosophy: the craftsmanship, the raw beauty, the personal touch of each product. With my retail experience, strong people skills, and passion for the brand, I’m eager to contribute. And I'm doing my thesis now, and I live in the city centre, so I’m flexible and available for \textbf{part-time work on weekdays, weekends, and during holiday seasons}
+    \end{onecolentry}
+
+    % ---------- Strengths ----------
+    \section{Selected Strengths}
+    \begin{onecolentry}
+        \begin{highlights}
+    \item \textbf{Customer care \& sales:} I’m a people person who enjoys meeting customers with a smile. I always aim to make everyone feel welcome and at ease in the store.
+    \item \textbf{Inventory \& replenishment:} One year of hands-on experience running a busy student shop in Beijing, serving over 300 regular customers.
+    \item \textbf{Team player:}  I'm a reliable and proactive collaborator. Whether supporting researchers at DTU or fellow shop staff, I enjoy helping the whole team succeed.
+    \item \textbf{SoMe:} Active on social media and aware of how digital presence strengthens retail visibility. Experienced in social media listening and trend tracking for clients.
+    \item \textbf{Languages:} English (proficient, IELTS 7.0), Chinese (native), Danish (basic, learning).
+\end{highlights}
+    \end{onecolentry}
+
+    % ---------- Experience ----------
+    \section{Experience}
+
+    \begin{twocolentry}{
+        Beijing, China\\
+        Sep 2021 -- Sep 2022
+    }
+        \textbf{Shop Owner \& Manager}; Sino–Danish College (SDC)
+        \begin{highlights}
+            \item Placed supplier orders online, received and checked deliveries.
+            \item Organised warehouse, tracked expiry dates and rotated stock.
+            \item Restocked shelves daily, updated price tags and simple displays.
+            \item Collected customer feedback and handled returns/claims with suppliers.
+            \item Developed \textbf{logistics, multitasking, and problem–solving} in a fast mini–retail setting.
+        \end{highlights}
+    \end{twocolentry}
+
+    \vspace{0.18 cm}
+
+    \begin{twocolentry}{
+        Lyngby, Denmark\\
+        Oct 2023 -- Jul 2025
+    }
+        \textbf{Research Assistant}, DTU HealthTech
+        \begin{highlights}
+            \item Supported colleagues daily with \textbf{clear communication} and reliable follow–up.
+            \item High attention to details and \textbf{quality mindset} in documentation and tasks.
+        \end{highlights}
+    \end{twocolentry}
+
+    \vspace{0.18 cm}
+
+    \begin{twocolentry}{
+        Shanghai, China\\
+        Feb 2023 -- May 2023
+    }
+        \textbf{Consulting Intern}, Illuminera (IQVIA)
+        \begin{highlights}
+            \item As a \textbf{Client–facing} work, I listened, asked good questions and prepared clean deliverables.
+            \item Performed \textbf{social media listening and monitoring} to provide clients with up-to-date market trends and bring new insights.
+        \end{highlights}
+    \end{twocolentry}
+
+    % % ---------- Education ----------
+    % \section{Education}
+    % \begin{twocolentry}{
+    %     Lyngby, Denmark\\
+    %     Sep 2023 -- Present
+    % }
+    %     \textbf{MSc, Bioinformatics \& Systems Biology} — Technical University of Denmark (DTU)
+    %     \begin{highlights}
+    %         \item Developed a structured, detail–oriented and collaborative way of working.
+    %     \end{highlights}
+    % \end{twocolentry}
+
+    % \vspace{0.15 cm}
+
+    % \begin{twocolentry}{
+    %     Beijing, China\\
+    %     Sep 2017 -- Jun 2021
+    % }
+    %     \textbf{BSc, Biotechnology} — Beijing Normal University
+    % \end{twocolentry}
+
+    % ---------- Extras ----------
+    \section{Additional}
+    \begin{onecolentry}
+        \textbf{Interests:} I’ve been playing \textbf{badminton} since an early age—it’s a hobby that keeps me focused and energised. I also love \textbf{hiking}, both for the chance to connect with nature and for the challenge of seeing hidden scenery that isn’t easily accessible. After moving to Copenhagen, I developed a new passion for exploring \textbf{nordic design stores}, and I already have a few pieces on my wish list waiting to buy after graduation~\smiley{}.\\
+        % \textbf{Availability:} I’m currently writing my master’s thesis and live within walking distance of ILLUM, so I’m quite flexible for a part-time job, both on weekdays, weekends, and during holiday seasons.
+    \end{onecolentry}
+
+\end{document}

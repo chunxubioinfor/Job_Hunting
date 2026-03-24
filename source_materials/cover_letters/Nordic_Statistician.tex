@@ -1,0 +1,89 @@
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \namesection{Chunxu}{Han}{ \urlstyle{same} \href{mailto:s220311@dtu.dk}{s220311@dtu.dk} | +45 52 73 06 85  | \urlstyle{same}\href{https://www.linkedin.com/in/chunxu-han/}{Linkedin}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Nordic Bioscience A/S}
+
+\companyaddress{
+Herlev Hovedgade 205 \\
+2730 Herlev
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Cecilie Bager,}
+
+% The first paragraph of your job application letter should include information on why you are writing. Mention the job you are applying for and where you found the position. If you have a contact at the company, mention the person's name and your connection here.
+
+\lettercontent{
+I’m happy to apply to Nordic Bioscience again. Last summer, I applied for a master’s thesis position but unfortunately was not selected. Since then, I have continued to follow the company and its work, and I have been looking for other ways my background might fit. When I saw this position, it felt like the right moment to apply again.
+} 
+
+\lettercontent{
+My background is in bioinformatics, and I work daily with statistical analysis using R and Python. I have worked on the development and maintenance of the IsoformSwitchAnalyzeR R package, including the release of version 2, where new statistical methods were introduced to improve robustness of isoform-level analyses. In my current master’s thesis at Novo Nordisk, I develop methods to assess batch-to-batch variability in single-cell RNA-seq data, with a focus on statistical soundness, reproducibility, and practical use in a GMP-adjacent research environment.
+} 
+
+   
+% The next section of your cover letter should describe what you have to offer the company. Make strong connections between your abilities and the requirements listed in the job posting. Mention specifically how your skills and experience match the job. Expand on the information in your resume.
+% Try to support each statement you make with a piece of evidence. Use several shorter paragraphs or bullets rather than one large block of text, which can be difficult to read and absorb quickly.
+%For example 
+
+% Using the knowledge and skills I have acquired in my <DEGREE PROGRAM> combined with my technical abilities I believe I can provide significant value to <COMPANY> while providing me invaluable experience to <PREPARE FOR OR FURTHER CAREER>.
+% <RELEVANT LIFE STORY/ WORK/ PROJECT >
+% In own projects, my coursework, work as a <PREVIOUS JOB TITLE> I have applied knowledge of <SUBJECT MATTER>.
+% <LIST OF SMART SOUNDING SKILLS AND TOOLS>.
+% Combining these tools with my interests in <FIELD> issues, I hope to help the <DEPARTMENT> answer questions about the <SUBJECT> behind <FIELD> projects.
+
+\lettercontent{I have mainly worked in collaborative research settings, both at DTU and Novo Nordisk. I often support biologists and researchers with analysis, method choices, and interpretation of results, and I am used to explaining statistical outputs to people without a statistical background. I enjoy this kind of close collaboration and see it as an important part of doing applied statistical work well.
+}
+
+% \lettercontent{I also have practical experience in bioinformatics, especially single-cell analysis. I helped updating IsoformSwitchAnalyzeR v2 (preprint) and applied it to single-cell GBM data. We found that peripheral tumour cells increase expression of non-coding GJC1 isoforms, effectively reducing the protein-coding variant, a change that may contribute to tumour invasion. My thesis focuses on developing methods to assess batch-to-batch variability in single-cell RNA-seq data. I have also been exposed to spatial transcriptomics through close collaboration with colleagues at ex-Cell Therapy, and I am very motivated to further develop skills in this area.
+% }
+
+\lettercontent{I am aware that this role is at a senior level, and I want to be open about that. While I believe my skills and way of working are relevant, I am still early in my career. For that reason, I would also be very interested to hear if there are other roles or future opportunities within Nordic Bioscience where my background could be a good fit. I would appreciate the opportunity to have a conversation.
+}
+
+\lettercontent{Thank you very much for considering my application.}
+% Conclude your application letter by thanking the employer for considering you for the position. 
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}  
+\documentclass[]{article}

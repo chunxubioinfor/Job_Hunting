@@ -85,25 +85,31 @@ def main():
     parser.add_argument("--email", required=True, help="Your Supabase user email")
     parser.add_argument("--cv", help="Path to tailored CV PDF")
     parser.add_argument("--cover-letter", help="Path to tailored cover letter PDF")
+    parser.add_argument("--job-id", help="Existing job ID — skip insert, just upload files")
+    parser.add_argument("--app-id", help="Existing application ID — skip insert, just upload files")
     args = parser.parse_args()
 
     # Load job data
     with open(args.data) as f:
         job_data = json.load(f)
 
-    print(f"Adding job: {job_data.get('title')} @ {job_data.get('company')}")
+    print(f"Job: {job_data.get('title')} @ {job_data.get('company')}")
 
     # Get user ID
     user_id = get_user_id(args.email)
     print(f"User ID: {user_id}")
 
-    # Insert job
-    job_id = insert_job(job_data)
-    print(f"Job inserted: {job_id}")
-
-    # Insert application
-    app_id = insert_application(user_id, job_id)
-    print(f"Application created: {app_id}")
+    # Use existing IDs or insert new
+    if args.job_id and args.app_id:
+        job_id = args.job_id
+        app_id = args.app_id
+        print(f"Using existing job: {job_id}")
+        print(f"Using existing application: {app_id}")
+    else:
+        job_id = insert_job(job_data)
+        print(f"Job inserted: {job_id}")
+        app_id = insert_application(user_id, job_id)
+        print(f"Application created: {app_id}")
 
     # Upload files if provided
     cv_storage_path = None
