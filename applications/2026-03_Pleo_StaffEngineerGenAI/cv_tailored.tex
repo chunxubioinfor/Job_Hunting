@@ -1,0 +1,338 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144} % blue
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Chunxu Han's CV},
+    pdfauthor={Chunxu Han},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{multicol}
+\usepackage{datetime2}
+\usepackage{graphicx}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Chunxu Han - Page \thepage{} of \pageref*{LastPage}}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{}{}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \begin{minipage}[t]{0.78\linewidth}
+        \raggedright
+        \fontsize{28 pt}{28 pt}
+        \textbf{Chunxu Han}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Peder Skrams Gade 16A, København K, Denmark}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:s220311@dtu.dk}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}s220311@dtu.dk}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+45 52 73 06 85}{{\footnotesize\faPhone*}\hspace*{0.13cm}+45 52 73 06 85}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/chunxu-han/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}chunxu-han}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/chunxubioinfor}{{\footnotesize\faGithub}\hspace*{0.13cm}chunxubioinfor}}%
+        \end{minipage}%
+        \hfill%
+        \begin{minipage}[t]{0.18\linewidth}
+        \raggedleft
+        \vspace{-1.2cm}
+        \includegraphics[width=2.4cm, height=2.8cm, keepaspectratio=false]{portrait.jpg}
+        \end{minipage}
+    \end{header}
+
+    \vspace{0.6 cm}
+
+    \begin{onecolentry}
+        \textit{I have been following Pleo for a while and I really admire what you have built: a product that 40,000+ businesses rely on, built out of Copenhagen, with a culture that genuinely values pragmatism and kindness. The GenAI Core team is especially exciting to me because it sits at the intersection of AI and infrastructure, making it possible for every product team to build AI features on a shared, reliable platform. I have been building LLM-powered tools and AI agents myself, and I would love the opportunity to do this kind of work at Pleo's scale.}
+    \end{onecolentry}
+
+    \vspace{0.3 cm}
+
+    \section{Relevant Experience}
+
+    \begin{onecolentry}
+
+        \textbf{AI Agent Development and LLM Integration} \\
+        I have hands-on experience building systems that use LLM APIs in practice. In my \href{https://github.com/chunxubioinfor/Job_dk}{Job\_dk} project, I built an LLM layer on top of a scraping pipeline that routes requests to different model providers, parses JSON responses, and handles rate limiting and incremental saving across 2,500+ records. I also built \href{https://github.com/chunxubioinfor/DailyJobMatch}{DailyJobMatch}, an automated workflow on n8n that scrapes LinkedIn daily via Apify, scores each posting against my CV using the OpenAI API across six dimensions, and sends a formatted HTML email digest with ranked matches. It runs autonomously in Docker with no manual intervention. These projects taught me that the real engineering challenge in AI is not calling a model, it is building the infrastructure around it so the output is reliable, observable, and useful.
+
+        \vspace{0.3 cm}
+
+        \textbf{Python Software Engineering} \\
+        I take software quality seriously. At Novo Nordisk, I developed \href{https://github.com/chunxubioinfor/scBatch}{scBatch}, a Python package with clean architecture, error handling, and user-oriented design. At DTU HealthTech, I spent two years maintaining \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR}, an R package used by researchers worldwide, where I triaged GitHub issues, diagnosed bugs from external users, and shipped the v2 release. I also built a full-stack job tracker with Next.js, Supabase, and Row Level Security, giving me experience across the stack from database design to deployment.
+
+        \vspace{0.3 cm}
+
+        \textbf{Data Pipelines and Scalable Processing} \\
+        I have built data pipelines that need to run reliably at scale. At DTU HealthTech, I built an automated pipeline to collect and process 40,000+ samples on HPC with parallel processing, caching, and resume support. I also built a web scraping pipeline with multi-strategy extraction and Playwright fallback for JS-rendered pages. Both systems were designed to handle failures gracefully and continue from where they left off, which I see as the same mindset needed for building reliable platform infrastructure.
+
+    \end{onecolentry}
+
+    %% ===== FIXED: Do not edit below this line =====
+
+    \section{Education}
+
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Sept 2023 -- March 2026
+}
+    \textbf{MSc in Bioinformatics and Systems Biology}, Technical University of Denmark
+    \begin{highlights}
+        \item I enrolled in both \textbf{Machine Learning} and \textbf{Deep Learning} courses, enabling me to develop an \textbf{AI-driven mindset} when formulating projects and developing new bioinformatics pipelines or tools.
+    \end{highlights}
+\end{twocolentry}
+
+
+    \section{Work Experience}
+
+        \begin{twocolentry}{
+    Målev, Denmark
+
+    Sep 2025 -- March 2026
+}
+    \textbf{Master Student}, Novo Nordisk
+
+    \vspace{0.1cm}
+
+    My master's thesis focuses on developing computational frameworks to evaluate batch-to-batch variability in single-cell RNA-seq data:
+
+    \begin{highlights}
+
+        \item \textbf{Methodology and Software Development:} Developed Batch Mixing Index (BMI), an entropy-based metric that quantifies per-cell batch mixing and incorporates \textbf{permutation-based statistical testing}, as well as scBatch, a \textbf{Python package} integrating seven complementary metrics for manufacturing batch variability assessment.
+
+        \vspace{0.1cm}
+
+        \item \textbf{AI/ML approaches:} Explored state-of-the-art data science approaches by applying the Deep Learning model to embed cell therapy batches into a shared latent space for variability assessment.
+
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Oct 2023 -- July 2025
+}
+    \textbf{Bioinformatics Research Assistant}, DTU HealthTech
+
+    \vspace{0.1cm}
+
+    I worked in Isoform Analysis Group for two years, which has been a transformative experience. I have grown from a student who only focuses on theoretical studies into a bioinformatician to deal with real-world problems:
+
+    \begin{highlights}
+        \item \textbf{Development and Maintenance of Tools:} Contributed to developing and updating the \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} R package. This experience sharpened my coding skills and can-do mindset, especially when handling issues with tools I'd never used before. I pushed myself to attempt and now I'm comfortable with the steep learning curve.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Bioinformatics Pipelines:} Developed and optimized bioinformatics pipelines, supporting others in running analyses. I mastered multi-tasking, learned to leverage \textbf{HPC} for parallel processing, and \textbf{Git} to achieve version control.
+
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+        \begin{twocolentry}{
+    Shanghai, China
+
+    Feb 2023 -- May 2023
+}
+    \textbf{Consulting Intern}, Illuminera, IQVIA
+
+    \vspace{0.1cm}
+
+    My first experience in a business setting, where I gained insights into the pharmaceutical market and developed professional skills:
+
+    \begin{highlights}
+        \item \textbf{Qualitative and Quantitative Research:} Conducted market trend and competitor analysis to formulate actionable strategies to clients. I also gained a deeper understanding of the pharmaceutical market in China and globally.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Client and KOLs Engagement:} Built professional relationships with clients and KOLs and coordinated with stakeholders to align project progress and delivery.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Data-Driven Deliverables:} Utilized tools like PowerPoint and Power BI to deliver strategic reports, transforming complex data into actionable business insights. I learned how to formulate the business problems and storytelling to the clients.
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+
+    \section{Hobby Projects}
+
+\begin{onecolentry}
+
+\textbf{\href{https://github.com/chunxubioinfor/DailyJobMatch}{DailyJobMatch}: AI Job Matching Agent} \\
+Automated workflow built on n8n and deployed with Docker. Scrapes LinkedIn daily via Apify, scores each posting against my CV using the OpenAI API across six dimensions (background, skills, experience, seniority, language, company fit), deduplicates and filters, then sends a formatted HTML email digest with ranked matches and direct apply links.
+
+        \vspace{0.3 cm}
+
+\textbf{\href{https://github.com/chunxubioinfor/job-tracker}{Job Tracker}: Full-Stack Web App} \\
+Built a personal job application tracker using Next.js, Supabase, and Vercel. Features include a private applications pipeline with status tracking, CV/cover letter file storage, and a weekly reflection log. Designed with Row Level Security so multiple users can use it independently.
+
+\end{onecolentry}
+
+    \section{Skills and Hobbies}
+
+        \begin{onecolentry}
+            \textbf{Programming:} Python, R, Bash, SQL, Snakemake
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Languages:} English (proficient), Chinese (native), Danish (Basic)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Soft Skills:} Communication, Teamwork, Client Engagement, Multitasking, Critical Thinking, Strong Work Ethic
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Hobbies:}
+            I've been playing \textbf{badminton} since an early age. It's a hobby that keeps me focused and energized. During holidays, I enjoy \textbf{traveling} around Europe to experience new food and cultures. I also love \textbf{hiking}, both for the chance to connect with nature and for the challenge of seeing hidden scenery that isn't easily accessible. After moving to Denmark, I discovered a new passion: \textbf{sailing}. Last summer, we sailed to Ven and Hallands Väderö, and it was a completely new experience and I feel free to ride the infinite waves.
+        \end{onecolentry}
+
+
+\end{document}

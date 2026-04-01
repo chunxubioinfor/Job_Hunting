@@ -1,0 +1,15 @@
+{
+  "title": "Junior Python Developer → Team Lead (Spiders & QA)",
+  "company": "Online Minds (Rentumo)",
+  "sector": "tech",
+  "location": "Copenhagen, Denmark",
+  "url": null,
+  "platform": "linkedin",
+  "source_type": "job_ad",
+  "description": "Rentumo is a rental housing search engine where automated Python scrapers scan 6,459 housing websites and find 38,833+ new listings every day across 10+ countries. Role involves developing and maintaining Python spiders, debugging scraping problems, improving stability, collaborating with QA team on data quality, and monitoring scraping performance. Path to spider team lead over time.",
+  "deadline": null,
+  "match_score": 7,
+  "match_reasons": "Direct Playwright scraping experience in Job_dk project|GPMdb pipeline scraping 40,000+ samples at DTU HealthTech|Strong Python across thesis, research, and hobby projects",
+  "gaps": "No commercial scraping at 7,000 spider scale|No Selenium experience|No formal CI/CD or QA process",
+  "added_by": "f95221c9-da0b-490a-8331-5cb79c347d8f"
+}

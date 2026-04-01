@@ -1,0 +1,15 @@
+{
+  "title": "Quantitative Researcher",
+  "company": "Venture Up",
+  "sector": "finance",
+  "location": "Copenhagen, Denmark",
+  "url": null,
+  "platform": "linkedin",
+  "source_type": "job_ad",
+  "description": "A leading quantitative investment team is looking for a Quantitative Researcher to help design, develop, and improve equity statistical arbitrage strategies. This role sits at the intersection of research and development—requiring both strong quantitative reasoning and the ability to build reliable research tools and models in code. Strong Python skills, large-scale data experience, and ability to move between theory and implementation required.",
+  "deadline": null,
+  "match_score": 6,
+  "match_reasons": "Python + large-scale data pipelines (40k samples)|Research-to-implementation loop mirrors quant strategy research|Statistical signal development (BMI, permutation testing)|ML/DL coursework applied in practice|Research software development (IsoformSwitchAnalyzeR, scBatch)",
+  "gaps": "No finance or trading domain knowledge|No time-series modelling experience|Master's vs PhD benchmark in job ad",
+  "added_by": "f95221c9-da0b-490a-8331-5cb79c347d8f"
+}

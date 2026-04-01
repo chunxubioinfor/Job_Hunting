@@ -1,0 +1,62 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Københavns Lufthavn}
+
+\companyaddress{
+Lufthavnsboulevarden 6 \\
+2770 Kastrup
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Ali Agha Javed,}
+
+\lettercontent{
+What drew me to this role is how directly your models translate into real decisions. Forecasting passenger flow to plan staffing at passport control, optimising cleaning schedules, managing baggage operations: these are problems where getting the model right has an immediate, visible impact. That kind of short distance from analysis to action is exactly the environment I want to work in.
+}
+
+\lettercontent{
+My thesis at Novo Nordisk focused on developing statistical methods and a Python package for manufacturing data, where I designed metrics, ran permutation-based significance testing, and built interactive visualisations to support cross-functional decision-making. At DTU HealthTech, I spent two years building data pipelines and maintaining research software. At Illuminera, IQVIA, I built dashboards and strategic reports with Power BI for pharmaceutical clients. I am currently building a project on Databricks to prepare for cloud-based analytics environments.
+}
+
+\lettercontent{
+I find the idea of working at Nordens largest airport genuinely compelling: it is a complex, high-tempo operation with real consequences for millions of people passing through each year. I would be happy to contribute my analytical skills and learn the domain quickly. My Danish is still at a basic level, but I am actively improving and I communicate confidently in English.
+}
+
+\lettercontent{Thank you for considering my application.}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}
+\documentclass[]{article}

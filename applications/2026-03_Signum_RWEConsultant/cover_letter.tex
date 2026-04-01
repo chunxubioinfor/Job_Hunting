@@ -1,0 +1,55 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Signum Life Science}
+
+\companyaddress{
+Copenhagen, Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+My background is in computational biology, not real-world evidence, and I want to be upfront about that. But the research loop I have been doing for the past two years maps closely onto what this role describes. At Novo Nordisk, my thesis centered on assessing batch variability in cell therapy manufacturing using single-cell RNA-seq data from patient-derived samples. I developed the Batch Mixing Index (BMI), a novel quantitative metric with permutation-based significance testing to detect systematic variation in high-dimensional biological data. The domain is cell therapy quality control, but the discipline is the same: define a signal in complex healthcare data, build reliable tools to test it, and validate the results with statistical rigor.
+}
+
+\lettercontent{
+At DTU HealthTech, I built pipelines processing over 40,000 samples on HPC infrastructure and co-developed IsoformSwitchAnalyzeR v2, an R package used by researchers worldwide and now published on bioRxiv. I also spent three months at Illuminera (IQVIA) doing market research and competitor analysis for pharmaceutical clients. That internship taught me how to translate complex analyses into something a client can actually act on, which is what stuck with me about consulting work.
+}
+
+\lettercontent{
+RWE and Nordic registries would be a new domain for me, and I am not trying to hide that. What I can offer is a strong quantitative foundation, experience with large healthcare datasets, and a proven ability to build the necessary knowledge from scratch. I have made that switch before, from biotech to consulting to bioinformatics. I am genuinely curious about real-world evidence, and I would approach learning it with the same rigor I bring to everything else.
+}
+
+\lettercontent{
+Thank you for considering my application. I would be happy to discuss further.
+}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}

@@ -1,0 +1,61 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Santander Nordics}
+
+\companyaddress{
+Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Lopamudra Ganguli,}
+
+\lettercontent{
+I come from a different domain, but the core of my work is the same as what your team does: building predictive models, validating them rigorously, and making sure the results hold up under scrutiny. At Novo Nordisk, I developed a statistical metric to detect systematic variation in manufacturing data, validated it with permutation-based testing, and presented the results to cross-functional teams who needed to trust the numbers before acting on them. That loop of developing, testing, and communicating models is what I enjoy most, and I would like the chance to apply it to credit risk.
+}
+
+\lettercontent{
+I work daily with Python, R, and SQL, and I have completed coursework in both Machine Learning and Deep Learning at DTU, covering logistic regression, decision trees, random forests, and neural networks. I have also built predictive models on real clinical data, where class imbalance and careful evaluation of precision and recall were central challenges. I do not have experience with SAS or regulatory risk models yet, but I learn new tools and domains quickly, and I am genuinely motivated to build that expertise.
+}
+
+\lettercontent{
+What draws me to Santander specifically is the combination of analytics rigour and real-world impact. Responsible lending decisions affect people's lives, and I find that meaningful. The fact that the Nordic team is growing and investing in AI and ML innovation makes it an exciting time to join.
+}
+
+\lettercontent{Thank you for considering my application.}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}
+\documentclass[]{article}

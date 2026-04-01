@@ -1,0 +1,55 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Novonesis}
+
+\companyaddress{
+Bagsværd, Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+I am writing to apply for the Data Scientist position in Fermentation Technology. The opportunity to apply machine learning to real fermentation workflows, working at the intersection of biology, engineering, and data science, is exactly what I have been looking for.
+}
+
+\lettercontent{
+My thesis at Novo Nordisk focused on developing statistical methods for biological manufacturing data. I built predictive models to assess batch variability in single-cell RNA-seq data, designed a novel metric with permutation-based testing, and developed a Python package integrating multiple complementary methods. At DTU HealthTech, I processed over 40,000 samples on HPC infrastructure and co-developed an R package now used by researchers worldwide. I work daily with Python and R, and I have taken Machine Learning and Deep Learning courses at DTU, applying these methods in real research settings.
+}
+
+\lettercontent{
+What I do not have yet is fermentation-specific experience or hands-on work with DoE and bioreactor data. But I understand biological systems, I have worked in an industrial biotech setting at Novo Nordisk, and I learn quickly. My academic background in biotechnology and bioinformatics gives me the foundation to understand fermentation processes, and my data science skills allow me to turn complex datasets into actionable insights. I am genuinely motivated to apply AI/ML to experimental workflows and help shape how data drives fermentation optimization.
+}
+
+\lettercontent{
+Thank you for considering my application. I would be happy to discuss further.
+}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}

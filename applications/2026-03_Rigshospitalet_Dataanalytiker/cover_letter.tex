@@ -1,0 +1,62 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     MAIN COVER LETTER CONTENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Rigshospitalet}
+
+\companyaddress{
+Blegdamsvej 9 \\
+2100 København Ø
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+My background is in bioinformatics, and for the past several years I have been investigating disease and health at the gene, transcript, and protein level. Now I want to go closer to where the data meets the patient. This position caught my attention because it is exactly that: using data analysis to directly support clinical decisions and improve how things work in practice for patients and staff at Rigshospitalet.
+}
+
+\lettercontent{
+I work daily with R, Python, and SQL, and I have experience building dashboards and reports with Power BI from my consulting internship at IQVIA. At DTU HealthTech, I spent two years building analytical pipelines and maintaining research software. At Novo Nordisk, my thesis focused on developing statistical methods for manufacturing data. I also worked with clinical EHR data in my Deep Learning course, building models for ICU mortality prediction.
+}
+
+\lettercontent{
+Beyond the analytical skills, I think I can also bring value on the digitalisation and AI side. I have hands-on experience building data pipelines and AI-powered tools, for example a scraping and analysis pipeline that processes thousands of records with LLM-based extraction and automated reporting. I would be happy to bring that kind of thinking to help Rigshospitalet gain new insights from clinical data more efficiently.
+}
+
+\lettercontent{Thank you for considering my application. I would be happy to come by for a conversation.}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{OpenFonts/signature1.png} \vspace{-1cm} }
+
+\end{document}
+\documentclass[]{article}

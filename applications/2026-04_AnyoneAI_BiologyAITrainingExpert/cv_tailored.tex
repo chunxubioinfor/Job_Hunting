@@ -1,0 +1,333 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144} % blue
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Chunxu Han's CV},
+    pdfauthor={Chunxu Han},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{multicol}
+\usepackage{datetime2}
+\usepackage{graphicx}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Chunxu Han - Page \thepage{} of \pageref*{LastPage}}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{}{}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \begin{minipage}[t]{0.78\linewidth}
+        \raggedright
+        \fontsize{28 pt}{28 pt}
+        \textbf{Chunxu Han}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Peder Skrams Gade 16A, København K, Denmark}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:s220311@dtu.dk}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}s220311@dtu.dk}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+45 52 73 06 85}{{\footnotesize\faPhone*}\hspace*{0.13cm}+45 52 73 06 85}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/chunxu-han/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}chunxu-han}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/chunxubioinfor}{{\footnotesize\faGithub}\hspace*{0.13cm}chunxubioinfor}}%
+        \end{minipage}%
+        \hfill%
+        \begin{minipage}[t]{0.18\linewidth}
+        \raggedleft
+        \vspace{-1.2cm}
+        \includegraphics[width=2.4cm, height=2.8cm, keepaspectratio=false]{portrait.jpg}
+        \end{minipage}
+    \end{header}
+
+    \vspace{0.6 cm}
+
+    \begin{onecolentry}
+        \textit{I have an MSc in Bioinformatics and Systems Biology and three years of hands-on experience spanning computational biology, genomics, and proteomics. I work daily with Python and bioinformatics tools, and I have co-authored two publications. I am genuinely interested in helping frontier AI models reason better about biology, and my background means I can design problems that reflect how real bioinformatics analysis is done.}
+    \end{onecolentry}
+
+    \vspace{0.3 cm}
+
+    \section{Relevant Experience}
+
+    \begin{onecolentry}
+
+        \textbf{Computational Biology and Bioinformatics Workflows} \\
+        My work spans multiple layers of biological data. At DTU HealthTech, I spent two years working on isoform-level transcriptomic analysis, contributing to \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} v2 and applying it to both long-read (Alzheimer's) and single-cell (Glioblastoma) RNA-seq data to decode disease mechanisms at the isoform level. I also built a pipeline to collect, curate, and re-quantify 40,000+ proteomics samples from GPMdb on HPC. At Novo Nordisk, my thesis focused on single-cell RNA-seq batch variability in cell therapy manufacturing, where I developed the Batch Mixing Index and a Python package integrating seven complementary metrics.
+
+        \vspace{0.3 cm}
+
+        \textbf{Python and Scientific Problem Solving} \\
+        Python is my primary language and I use it for everything from data analysis to package development. I developed \href{https://github.com/chunxubioinfor/scBatch}{scBatch}, a Python package with statistical methods, permutation-based testing, and interactive visualisations. At DTU, I completed Machine Learning and Deep Learning courses, and our team built predictive models for ICU mortality using EHR time-series data. I am comfortable with multi-step scientific reasoning, designing rigorous validation experiments, and writing reproducible analysis scripts.
+
+        \vspace{0.3 cm}
+
+        \textbf{Rigour, Reproducibility, and Clear Communication} \\
+        Two years of maintaining an open-source R package taught me what rigour looks like in practice: triaging GitHub issues from users worldwide, diagnosing bugs I had never seen before, and making sure every fix was tested and documented. My two publications required clear, precise scientific writing and careful experimental design. I pay close attention to detail and I understand the difference between a problem that looks correct and one that is verifiably correct.
+
+    \end{onecolentry}
+
+    \section{Education}
+
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Sept 2023 -- March 2026
+}
+    \textbf{MSc in Bioinformatics and Systems Biology}, Technical University of Denmark
+    \begin{highlights}
+        \item \textbf{Specialisation}: Biomedical Bioinformatics
+        \item My favourite course is \textbf{Immunological Bioinformatics}, where I learned how my bioinformatics skills can contribute to impactful areas like cancer treatment and vaccine development in industry.
+        \item Enrolled in both \textbf{Machine Learning} and \textbf{Deep Learning} courses, enabling me to develop an \textbf{AI-driven mindset} when formulating projects and developing new bioinformatics pipelines.
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+\begin{twocolentry}{
+    Beijing, China
+
+    Sept 2017 -- June 2021
+}
+    \textbf{BSc in Biotechnology}, Beijing Normal University
+    \begin{highlights}
+        \item \textbf{Coursework:} Built a solid foundation in \textbf{Biotech} with courses covering ecology, molecular biology, cell biology, and bioinformatics, alongside \textbf{lab training}.
+    \end{highlights}
+\end{twocolentry}
+
+
+    \section{Work Experience}
+
+        \begin{twocolentry}{
+    Målev, Denmark
+
+    Sep 2025 -- March 2026
+}
+    \textbf{Master Student}, Novo Nordisk -- AI \& Digital Innovation (ADI)
+
+    \vspace{0.1cm}
+
+    My master's thesis focuses on developing computational frameworks to evaluate batch-to-batch variability in single-cell RNA-seq data:
+
+    \begin{highlights}
+        \item \textbf{Python Software Development:} Developed scBatch, a Python package integrating seven complementary metrics for manufacturing batch variability assessment. Apart from strengthening my Python skills, I gained end-to-end experience in scientific software development, including package architecture design, error handling, and user-oriented implementation.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Methodology Development:} Identified limitations in existing batch effect methods and developed the entropy-based Batch Mixing Index (BMI) to quantify per-cell neighbourhood mixing with statistical testing. This work strengthened my ability to translate methodological gaps into implementable solutions.
+
+        \vspace{0.1cm}
+
+        \item \textbf{AI/ML approaches:} Explored state-of-the-art data science approaches by applying the foundation model UCE to embed cell therapy batches into a shared latent space for variability assessment.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Meetings and Collaboration:} Participated in cross-functional meetings and collaborated with R\&D and CMC teams to ensure biological interpretability and industrial relevance of project.
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+        \begin{twocolentry}{
+    Lyngby, Denmark
+
+    Oct 2023 -- July 2025
+}
+    \textbf{Bioinformatics Research Assistant}, DTU HealthTech
+
+    \vspace{0.1cm}
+
+    I worked in Isoform Analysis Group for two years, which has been a transformative experience. I have grown from a student who only focuses on theoretical studies into a bioinformatician to deal with real-world problems:
+
+    \begin{highlights}
+        \item \textbf{Development and Maintenance of Tools:} Contributed to developing and updating the \href{https://github.com/kvittingseerup/IsoformSwitchAnalyzeR}{IsoformSwitchAnalyzeR} R package. This experience sharpened my coding skills and can-do mindset, especially when handling issues with tools I'd never used before. I pushed myself to attempt and now I'm comfortable with the steep learning curve.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Bioinformatics Pipelines:} Developed and optimized bioinformatics pipelines, supporting others in running analyses. I mastered multi-tasking, learned to leverage \textbf{HPC} for parallel processing, and \textbf{Git} to achieve version control.
+
+        \vspace{0.1cm}
+
+        \item \textbf{Ad-hoc Work:} Managed various ad-hoc tasks, from literature reviews to data organization, learning how to \textbf{prioritize and organize} work effectively in a fast-paced research environment.
+    \end{highlights}
+\end{twocolentry}
+
+        \vspace{0.3 cm}
+
+
+    \section{Publications}
+
+        \begin{onecolentry}
+            \begin{itemize}
+                \item \textbf{Han, C.}, Gilis, J., Iriondo Delgado, E., Clement, L., \& Vitting-Seerup, K. \textit{IsoformSwitchAnalyzeR v2: Analysis of Functional Isoform Changes in Long-read and Single-cell Sequencing Data}. bioRxiv (2025). \href{https://doi.org/10.64898/2025.12.08.693027}{doi:10.64898/2025.12.08.693027}
+
+                \vspace{0.1 cm}
+
+                \item Mikkelsen, J. M., \textbf{Han, C.}, Kanakoglou, D. S., Tiberi, S., \& Vitting-Seerup, K. \textit{Beyond the Gene in Genetics: How Isoform-Resolved Analysis Empowers the Study of Both Common and Rare Genetic Variation}. medRxiv (2025). \href{https://doi.org/10.1101/2025.03.31.25324931}{doi:10.1101/2025.03.31.25324931}
+            \end{itemize}
+        \end{onecolentry}
+
+
+    \section{Skills and Hobbies}
+
+        \begin{onecolentry}
+            \textbf{Programming:} Python, R, Bash, SQL, Snakemake
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Languages:} English (proficient), Chinese (native), Danish (Basic)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Soft Skills:} Communication, Teamwork, Client Engagement, Multitasking, Critical Thinking, Strong Work Ethic
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Hobbies:}
+            I've been playing \textbf{badminton} since an early age. It's a hobby that keeps me focused and energized. During holidays, I enjoy \textbf{traveling} around Europe to experience new food and cultures. I also love \textbf{hiking}, both for the chance to connect with nature and for the challenge of seeing hidden scenery that isn't easily accessible. After moving to Denmark, I discovered a new passion: \textbf{sailing}. Last summer, we sailed to Ven and Hallands Väderö, and it was a completely new experience and I feel free to ride the infinite waves.
+        \end{onecolentry}
+
+
+\end{document}

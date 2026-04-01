@@ -1,0 +1,55 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{VML MAP}
+
+\companyaddress{
+Copenhagen, Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+My consulting internship at Illuminera (IQVIA) was only three months, but it changed how I think about data work. Before that, data was something I analysed in research settings. There, it was something I had to translate into a decision a client could actually act on. That shift stuck with me, and it is the main reason I am applying here.
+}
+
+\lettercontent{
+Since then, most of my work has been technical: building a statistical metric for batch quality assessment at Novo Nordisk, processing large-scale data pipelines at DTU, co-developing an R package used by researchers worldwide. I also built an AI job-matching agent and a full-stack web app outside of work, because I find data products genuinely interesting to build. My quantitative foundation is solid, and what I want now is to bring that back into a client-facing context, where the output has to be clear, credible, and useful to someone making a business decision.
+}
+
+\lettercontent{
+VML MAP sits exactly at that intersection. The work here combines audience strategy, experimentation design, and data architecture enablement: problems that require both technical depth and the ability to communicate clearly across functions. Coming from biology and consulting rather than marketing, I do not have deep experience with Salesforce or Adobe stacks yet, but I learn platforms quickly and the underlying analytical patterns are familiar. What I bring is a rigorous way of thinking about data problems and the ability to make that thinking accessible to people who do not share the same technical background.
+}
+
+\lettercontent{
+Thank you for considering my application. Happy to discuss further.
+}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}

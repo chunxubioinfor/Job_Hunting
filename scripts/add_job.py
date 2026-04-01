@@ -17,6 +17,7 @@ import os
 import sys
 import json
 import argparse
+from datetime import date
 from pathlib import Path
 from dotenv import load_dotenv
 from supabase import create_client, Client
@@ -47,9 +48,14 @@ def insert_job(job: dict) -> str:
 
 
 def insert_application(user_id: str, job_id: str) -> str:
-    """Create application row with status to_apply, return application ID."""
+    """Create application row with status applied and today's date, return application ID."""
     res = supabase.table("applications").upsert(
-        {"user_id": user_id, "job_id": job_id, "status": "to_apply"},
+        {
+            "user_id": user_id,
+            "job_id": job_id,
+            "status": "applied",
+            "applied_date": date.today().isoformat(),
+        },
         on_conflict="user_id,job_id"
     ).execute()
     return res.data[0]["id"]

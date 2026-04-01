@@ -1,0 +1,15 @@
+{
+  "title": "(Senior) Data Scientist - AI/ML for Fermentation Optimization",
+  "company": "Novonesis",
+  "sector": "biotech",
+  "location": "Bagsværd, Denmark",
+  "url": null,
+  "platform": "linkedin",
+  "source_type": "job_ad",
+  "description": "Data Scientist role in Fermentation Technology (R&D). Develop predictive models for fermentation optimization, use ML to guide experimental design, integrate bioreactor/screening data, build internal tools (Python/Streamlit). Work at intersection of biology, engineering, and data science. Requires MSc/PhD in Data Science/Biotechnology/Bioinformatics, ML/statistical modelling experience, Python skills, understanding of DoE and biological data. 2-year fixed term with extension possibility.",
+  "deadline": "2026-04-12",
+  "match_score": 7,
+  "match_reasons": "MSc in Bioinformatics (DTU)|Strong Python and data analysis skills|ML/Deep Learning coursework|Experience with biological data (single-cell RNA-seq, proteomics)|Statistical modelling and time-series data (Novo Nordisk thesis)|Biotech academic background (BSc + MSc)|Industry experience at Novo Nordisk (fermentation parent company)",
+  "gaps": "No fermentation-specific experience|No DoE (Design of Experiments) experience|No Streamlit/Dash tool development|No electronic lab notebook experience (Benchling)|Senior level vs. recent graduate|Limited ML deployment experience|No bioreactor or screening platform data experience",
+  "added_by": "f95221c9-da0b-490a-8331-5cb79c347d8f"
+}

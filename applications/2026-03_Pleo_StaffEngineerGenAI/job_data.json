@@ -1,0 +1,15 @@
+{
+  "title": "Staff Engineer (GenAI Core)",
+  "company": "Pleo Technologies",
+  "sector": "tech",
+  "location": "Copenhagen, Denmark",
+  "url": null,
+  "platform": "linkedin",
+  "source_type": "job_ad",
+  "description": "Staff Engineer for GenAI Core team at Pleo. Owns AI platform infrastructure including LLM routing, observability, evaluation. Requires deep backend systems experience, distributed systems, shared platform infrastructure, LLM APIs in production.",
+  "deadline": null,
+  "match_score": 1,
+  "match_reasons": "Experience building AI agents and LLM-based tools|Python development and package architecture|Interest in AI infrastructure",
+  "gaps": "Staff-level seniority requires 8-12+ years experience|No backend systems or distributed systems experience|No production infrastructure or platform engineering|No LLM routing or proxy layer experience",
+  "added_by": "f95221c9-da0b-490a-8331-5cb79c347d8f"
+}

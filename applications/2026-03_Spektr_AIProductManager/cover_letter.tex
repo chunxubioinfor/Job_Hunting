@@ -1,0 +1,55 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - Cover Letter Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+\definecolor{textColor}{RGB}{0, 14, 82}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\color{textColor}
+
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+\companyname{Spektr}
+
+\companyaddress{
+Copenhagen, Denmark
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\raggedleft
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5em}
+
+\lettercontent{Dear Hiring Team,}
+
+\lettercontent{
+A few months ago, I built DailyJobMatch, an AI agent that fetches, filters, and ranks job postings based on my CV. Without any promotion, it reached 5,000 likes and saves on RedNote and over 100 GitHub stars. That response surprised me, and it made me think carefully about why. The answer was not the technology. It was that the tool solved one specific problem for one specific person, repeatedly and reliably. That realisation is what made me want to do this properly, inside a real company.
+}
+
+\lettercontent{
+My background is technical: an MSc from DTU, two years building research software and data pipelines at scale, a thesis at Novo Nordisk where I designed and implemented a statistical metric from scratch. I have also built a full-stack web app end-to-end (Next.js, Supabase, Vercel), so I understand the constraints that engineers face and can work closely with them without losing time on requirements that are not buildable. What I have not done is hold a formal PM title. What I have done is go through the full cycle of identifying a problem, building something, shipping it, and seeing how people actually use it.
+}
+
+\lettercontent{
+Spektr's focus on AI in a regulated environment is an interesting challenge, and the early-stage setup is exactly the kind of place where I want to learn and contribute. More broadly, I am open to other roles at AI startups or positions involving data, software development, or applied ML.
+}
+
+\lettercontent{
+Thank you for considering my application. Happy to discuss further.
+}
+
+\closing{Sincerely,\\ \vspace{.1cm} \includegraphics[width=4cm]{signature1.png} \vspace{-1cm} }
+
+\end{document}
